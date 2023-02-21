@@ -62,3 +62,19 @@ Run ksqlDB cli:
 ```shell
 ksql http://localhost:8088
 ```
+
+
+## Docker
+
+Build image:
+
+```shell
+ng build
+docker build -t sauljabin/kinetik:latest .
+```
+
+Run:
+
+```shell
+docker run -it -p 80:80 --network cluster sauljabin/kinetik:latest
+```

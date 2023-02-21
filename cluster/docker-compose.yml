@@ -226,3 +226,7 @@ volumes:
   zookeeper_datalog:
   connect_plugins:
   ksqldb_extensions:
+
+networks:
+  default:
+    name: cluster

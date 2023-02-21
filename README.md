@@ -1,27 +1,64 @@
-# Kinetik
+# kinetik
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+**kinetik** is a [ksqlDB](https://ksqldb.io/) UI.
 
-## Development server
+## Development Commands
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Development server:
 
-## Code scaffolding
+```shell
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Open <http://localhost:4200/>
 
-## Build
+Code scaffolding:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+ng generate component component-name
+```
 
-## Running unit tests
+> You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Build:
 
-## Running end-to-end tests
+```shell
+ng build
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+> The build artifacts will be stored in the `dist/` directory.
 
-## Further help
+Running unit tests:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```shell
+ng test
+```
+
+Running end-to-end tests:
+
+```shell
+ng e2e
+```
+
+Lint:
+
+```shell
+ng lint
+```
+
+## Kafka Cluster
+
+Run local cluster:
+
+```shell
+cd cluster
+docker compose up -d
+```
+
+> Open <http://localhost:8080/>
+
+Run ksqlDB cli:
+
+```shell
+ksql http://localhost:8088
+```

@@ -5,6 +5,9 @@
 <br/>
 <a href="https://angular.io/"><img alt="Angular" width="70" height="20" src="https://img.shields.io/badge/-angular-C3012F?logo=angular&logoColor=white"></a>
 <a href="https://angular.io/"><img alt="Angular" src="https://img.shields.io/github/package-json/dependency-version/sauljabin/kinetik/@angular/core"></a>
+<br/>
+<a href="https://nodejs.org/en/"><img alt="Node" width="70" height="20" src="https://img.shields.io/badge/-node.js-339933?logo=node.js&logoColor=white"></a>
+<a href="https://nodejs.org/en/"><img alt="Node" src="https://img.shields.io/badge/version-18.14.2-blue"></a>
 <br>
 <a href="https://ksqldb.io/"><img alt="ksqlDB" width="70" height="20" src="https://img.shields.io/badge/-ksqlDB-F05662?logo=apache-kafka&logoColor=white"></a>
 <a href="https://ksqldb.io/"><img alt="ksqlDB" src="https://img.shields.io/badge/version-0.28.3-blue"></a>
@@ -24,7 +27,7 @@ cd cluster && docker compose up -d
 docker run -d --name kinetik -it -p 80:80 --network cluster sauljabin/kinetik:latest
 ```
 
-> Open <http://localhost:8080/>
+> Open <http://localhost/>
 
 ## Configuration
 
@@ -80,12 +83,6 @@ Running unit tests:
 ng test
 ```
 
-Running end-to-end tests:
-
-```shell
-ng e2e
-```
-
 Lint:
 
 ```shell
@@ -109,7 +106,7 @@ Run ksqlDB cli:
 ksql http://localhost:8088
 ```
 
-> Install kafka cli tools from <https://github.com/sauljabin/kafka-cli-installer>
+> Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>
 
 ### Docker Build
 
@@ -125,7 +122,7 @@ Run:
 docker run -it -p 80:80 --network cluster sauljabin/kinetik:latest
 ```
 
-### ksqlDB REST
+### ksqlDB REST Utils
 
 List topics:
 
@@ -133,4 +130,4 @@ List topics:
 http POST :8088/ksql Accept:application/vnd.ksql.v1+json ksql="LIST TOPICS;"
 ```
 
-> Install `httpie` from <https://httpie.io/cli>
+> Get `httpie` at <https://httpie.io/cli>

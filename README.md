@@ -8,8 +8,8 @@ Run kinetik:
 
 ```shell
 docker run -it -p 80:80 \
-    -e KINETIK_PORT=<port> \
-    -e KINETIK_HOST=<host> \
+    -e KINETIK_PORT=80 \
+    -e KINETIK_HOST=localhost \
     -e KSQLDB_URL=<url> \
     -e KSQLDB_USER=<user> \
     -e KSQLDB_PASSWORD=<password> \

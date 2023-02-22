@@ -1,20 +1,32 @@
 # kinetik
 
-**kinetik** is a [ksqlDB](https://ksqldb.io/) UI.
+<a href="https://github.com"><img alt="GitHub" width="70" height="20" src="https://img.shields.io/badge/-github-blueviolet?logo=github&logoColor=white"></a>
+<a href="https://github.com/sauljabin/kinetik/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/sauljabin/kinetik"></a>
+<br/>
+<a href="https://angular.io/"><img alt="Angular" width="70" height="20" src="https://img.shields.io/badge/-angular-C3012F?logo=angular&logoColor=white"></a>
+<a href="https://angular.io/"><img alt="Angular" src="https://img.shields.io/github/package-json/dependency-version/sauljabin/kinetik/@angular/core"></a>
+<br>
+<a href="https://ksqldb.io/"><img alt="ksqlDB" width="70" height="20" src="https://img.shields.io/badge/-ksqlDB-F05662?logo=apache-kafka&logoColor=white"></a>
+<a href="https://ksqldb.io/"><img alt="ksqlDB" src="https://img.shields.io/badge/version-0.28.3-blue"></a>
+<br>
+<a href="https://www.docker.com/"><img alt="Docker" width="70" height="20" src="https://img.shields.io/badge/-docker-blue?logo=docker&logoColor=white"></a>
+<a href="https://hub.docker.com/r/sauljabin/kinetik"><img alt="Docker Image Version (latest by date)" src="https://img.shields.io/docker/v/sauljabin/kinetik?label=tag"></a>
+<a href="https://hub.docker.com/r/sauljabin/kinetik"><img alt="Docker Image Size (latest by date)" src="https://img.shields.io/docker/image-size/sauljabin/kinetik"></a>
+
+**kinetik** is a **WIP** [ksqlDB](https://ksqldb.io/) UI.
 
 ## Getting Start
 
 Run kinetik:
 
 ```shell
-docker run -it -p 80:80 \
-    -e KINETIK_PORT=80 \
-    -e KINETIK_HOST=localhost \
-    -e KSQLDB_URL=<url> \
-    -e KSQLDB_USER=<user> \
-    -e KSQLDB_PASSWORD=<password> \
-    sauljabin/kinetik:latest
+cd cluster && docker compose up -d
+docker run -d --name kinetik -it -p 80:80 --network cluster sauljabin/kinetik:latest
 ```
+
+> Open <http://localhost:8080/>
+
+## Configuration
 
 Environment Variable:
 
@@ -26,9 +38,17 @@ Environment Variable:
 |KSQLDB_USER||
 |KSQLDB_PASSWORD||
 
-## Commands
+```shell
+docker run -it -p 80:80 \
+    -e KINETIK_PORT=80 \
+    -e KINETIK_HOST=localhost \
+    -e KSQLDB_URL=<url> \
+    -e KSQLDB_USER=<user> \
+    -e KSQLDB_PASSWORD=<password> \
+    sauljabin/kinetik:latest
+```
 
-### Development
+## Development
 
 Server:
 
@@ -96,7 +116,6 @@ ksql http://localhost:8088
 Build image:
 
 ```shell
-ng build
 docker build -t sauljabin/kinetik:latest .
 ```
 

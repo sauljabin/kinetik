@@ -1,0 +1,23 @@
+worker_processes 4;
+
+events { 
+    worker_connections 1024; 
+}
+
+http {
+    server {
+        listen ${KINETIK_PORT};
+        server_name ${KINETIK_HOST};
+
+        include /etc/nginx/mime.types;
+
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+        }
+
+        location /api/ {
+            proxy_pass ${KSQLDB_URL};
+        }
+    }
+}

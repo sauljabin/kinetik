@@ -4,8 +4,8 @@ COPY . /kinetik
 RUN npm install && npm run ng build
 
 FROM nginx:stable
+COPY nginx/*.conf.template /etc/nginx/
+COPY kinetik-entrypoint.sh /kinetik-entrypoint.sh
 COPY --from=builder /kinetik/dist/kinetik /usr/share/nginx/html
-COPY nginx/nginx.conf /etc/nginx/nginx.conf.template
-COPY docker-entrypoint.sh /kinetik/docker-entrypoint.sh
-ENTRYPOINT ["/kinetik/docker-entrypoint.sh"]
+ENTRYPOINT ["/kinetik-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]

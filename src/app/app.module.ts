@@ -3,14 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
+
+import { HttpClientModule } from '@angular/common/http';
+import { TopicListComponent } from './topic-list/topic-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TopicListComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

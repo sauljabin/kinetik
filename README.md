@@ -2,9 +2,35 @@
 
 **kinetik** is a [ksqlDB](https://ksqldb.io/) UI.
 
-## Development Commands
+## Getting Start
 
-Development server:
+Run kinetik:
+
+```shell
+docker run -it -p 80:80 \
+    -e KINETIK_PORT=<port> \
+    -e KINETIK_HOST=<host> \
+    -e KSQLDB_URL=<url> \
+    -e KSQLDB_USER=<user> \
+    -e KSQLDB_PASSWORD=<password> \
+    sauljabin/kinetik:latest
+```
+
+Environment Variable:
+
+| Variable | Default |
+|---|---|
+|KINETIK_HOST|localhost|
+|KINETIK_PORT|80|
+|KSQLDB_URL|<http://ksqldb:8088>|
+|KSQLDB_USER||
+|KSQLDB_PASSWORD||
+
+## Commands
+
+### Development
+
+Server:
 
 ```shell
 ng serve
@@ -46,7 +72,7 @@ Lint:
 ng lint
 ```
 
-## Kafka Cluster
+### Kafka Cluster
 
 Run local cluster:
 
@@ -63,8 +89,9 @@ Run ksqlDB cli:
 ksql http://localhost:8088
 ```
 
+> Install kafka cli tools from <https://github.com/sauljabin/kafka-cli-installer>
 
-## Docker
+### Docker Build
 
 Build image:
 
@@ -78,3 +105,13 @@ Run:
 ```shell
 docker run -it -p 80:80 --network cluster sauljabin/kinetik:latest
 ```
+
+### ksqlDB REST
+
+List topics:
+
+```shell
+http POST :8088/ksql Accept:application/vnd.ksql.v1+json ksql="LIST TOPICS;"
+```
+
+> Install `httpie` from <https://httpie.io/cli>

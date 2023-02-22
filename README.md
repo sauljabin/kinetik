@@ -106,8 +106,6 @@ Run ksqlDB cli:
 ksql http://localhost:8088
 ```
 
-> Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>
-
 ### Docker Build
 
 Build image:
@@ -130,4 +128,8 @@ List topics:
 http POST :8088/ksql Accept:application/vnd.ksql.v1+json ksql="LIST TOPICS;"
 ```
 
-> Get `httpie` at <https://httpie.io/cli>
+### Tools
+
+* Get `http` at <https://httpie.io/cli>
+* Get `ng` at <https://angular.io/cli>
+* Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>

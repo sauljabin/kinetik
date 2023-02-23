@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest]
-        node: [18 ]
+        node: [18]
     steps:
       - name: Checkout
         uses: actions/checkout@v3

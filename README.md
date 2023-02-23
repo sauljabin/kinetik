@@ -2,6 +2,7 @@
 
 <a href="https://github.com"><img alt="GitHub" width="70" height="20" src="https://img.shields.io/badge/-github-blueviolet?logo=github&logoColor=white"></a>
 <a href="https://github.com/sauljabin/kinetik/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/sauljabin/kinetik"></a>
+<a href="https://github.com/sauljabin/kinetik/actions"><img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/sauljabin/kinetik/main.yml?branch=main"></a>
 <br/>
 <a href="https://angular.io/"><img alt="Angular" width="70" height="20" src="https://img.shields.io/badge/-angular-C3012F?logo=angular&logoColor=white"></a>
 <a href="https://angular.io/"><img alt="Angular" src="https://img.shields.io/github/package-json/dependency-version/sauljabin/kinetik/@angular/core"></a>

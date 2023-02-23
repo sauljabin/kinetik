@@ -1,10 +1,9 @@
 ---
 name: User story
 about: New feature or enhancement
-title: ''
+title: ""
 labels: user story
-assignees: ''
-
+assignees: ""
 ---
 
 **As** [description of user],

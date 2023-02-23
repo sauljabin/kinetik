@@ -9,17 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { TopicListComponent } from './topic-list/topic-list.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TopicListComponent,
-  ],
+  declarations: [AppComponent, TopicListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

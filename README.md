@@ -33,13 +33,13 @@ docker run -d --name kinetik -it -p 80:80 --network cluster sauljabin/kinetik:la
 
 Environment Variable:
 
-| Variable | Default |
-|---|---|
-|KINETIK_HOST|localhost|
-|KINETIK_PORT|80|
-|KSQLDB_URL|<http://ksqldb:8088>|
-|KSQLDB_USER||
-|KSQLDB_PASSWORD||
+| Variable        | Default              |
+| --------------- | -------------------- |
+| KINETIK_HOST    | localhost            |
+| KINETIK_PORT    | 80                   |
+| KSQLDB_URL      | <http://ksqldb:8088> |
+| KSQLDB_USER     |                      |
+| KSQLDB_PASSWORD |                      |
 
 ```shell
 docker run -it -p 80:80 \
@@ -130,6 +130,6 @@ http POST :8088/ksql Accept:application/vnd.ksql.v1+json ksql="LIST TOPICS;"
 
 ### Tools
 
-* Get `http` at <https://httpie.io/cli>
-* Get `ng` at <https://angular.io/cli>
-* Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>
+- Get `http` at <https://httpie.io/cli>
+- Get `ng` at <https://angular.io/cli>
+- Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>

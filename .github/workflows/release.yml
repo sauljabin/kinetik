@@ -11,8 +11,14 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest]
-        node: [18]
     steps:
+      - name: Wait for tests to succeed
+        uses: lewagon/wait-on-check-action@v1.3.1
+        with:
+          ref: ${{ github.ref }}
+          running-workflow-name: CI
+          repo-token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          wait-interval: 20
       - name: Checkout
         uses: actions/checkout@v3
       - name: Git Tag
@@ -21,16 +27,6 @@ jobs:
         with:
           tagRegex: "v(.*)"
           tagRegexGroup: 1
-      - name: Setup Node ${{ matrix.node }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node }}
-      - name: Install Dependencies
-        run: npm install
-      - name: Run Tests
-        run: npm run test:headless
-      - name: Run Build
-        run: npm run build
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Login to Docker Hub

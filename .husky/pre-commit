@@ -4,3 +4,4 @@
 npx prettier --write ./src
 ng lint
 ng test --no-watch --no-progress --browsers ChromeHeadless
+git diff --exit-code

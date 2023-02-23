@@ -53,6 +53,12 @@ docker run -it -p 80:80 \
 
 ## Development
 
+Start:
+
+```shell
+npm install
+```
+
 Server:
 
 ```shell

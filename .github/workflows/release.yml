@@ -12,13 +12,13 @@ jobs:
       matrix:
         platform: [ubuntu-latest]
     steps:
-      - name: Waiting for main.yml
-        uses: convictional/trigger-workflow-and-wait@v1.6.1
+      - name: Wait for tests to succeed
+        uses: lewagon/wait-on-check-action@v1.3.1
         with:
-          owner: sauljabin
-          repo: kinetik
-          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          workflow_file_name: main.yml
+          ref: main
+          running-workflow-name: CI
+          repo-token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          wait-interval: 20
       - name: Checkout
         uses: actions/checkout@v3
       - name: Git Tag

@@ -100,7 +100,7 @@ ng lint
 New version:
 
 ```shell
-npm version major|minor|patch --no-commit-hooks
+npm version major|minor|patch
 git push && git push --tags
 ```
 

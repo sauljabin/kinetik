@@ -149,5 +149,5 @@ http POST :8088/ksql Accept:application/vnd.ksql.v1+json ksql="LIST TOPICS;"
 - Get `http` at <https://httpie.io/cli>
 - Get `ng` at <https://angular.io/cli>
 - Get `ksql` at <https://github.com/sauljabin/kafka-cli-installer>
-- Get `nvm`at <https://github.com/nvm-sh/nvm>
-- Get `docker`at <https://www.docker.com/>
+- Get `nvm` at <https://github.com/nvm-sh/nvm>
+- Get `docker` at <https://www.docker.com/>

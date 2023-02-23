@@ -95,6 +95,15 @@ Lint:
 ng lint
 ```
 
+### Bump Version
+
+New version:
+
+```shell
+npm version major|minor|patch
+git push && git push --tags
+```
+
 ### Kafka Cluster
 
 Run local cluster:
